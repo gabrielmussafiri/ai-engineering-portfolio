@@ -14,7 +14,7 @@ DB_PORT = os.getenv('DB_PORT')
 
 # 1. Connect to PostgreSQL
 conn = psycopg2.connect(
-    db_name = DB_NAME,
+    dbname = DB_NAME,
     user = DB_USER,
     password = DB_PASSWORD,
     host = DB_HOST,
@@ -28,7 +28,9 @@ consumer = KafkaConsumer(
     'transactions',
     bootstrap_servers='localhost:9092',
     value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-    auto_offset_reset='earliest'
+    auto_offset_reset='earliest',
+    group_id='transactions-processor-1',
+    enable_auto_commit=True
 )
 
 # 3. For Each message, insert to db
