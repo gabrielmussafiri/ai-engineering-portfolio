@@ -1,0 +1,23 @@
+artifact_path: /Users/gm/LYGM GROUP/Side Projects/My AI Engineer Portofolio/Classiscal
+  ML Pipeline/mlruns/1/models/m-e731424cd6eb4e3e8055ba25627576b0/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.13.2
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.4.1
+mlflow_version: 3.16.1
+model_id: m-e731424cd6eb4e3e8055ba25627576b0
+model_size_bytes: 95096
+model_uuid: m-e731424cd6eb4e3e8055ba25627576b0
+prompts: null
+run_id: 53dad9b5a8fb40c7ae840c89b5b7fc09
+utc_time_created: '2026-10-03 14:44:34.704375'
